@@ -1,0 +1,15 @@
+[build]
+command = "npm install && node index.js"
+builder = "nixpacks"
+
+[deploy]
+startCommand = "node index.js"
+
+[variables]
+NODE_ENV = "production"
+PORT = "8080"
+COOKIES_PATH = "/app/final_cookies.txt"
+RAILWAY_VOLUME_MOUNT_PATH = "/tmp/downloads"
+
+[volumes]
+downloads = "/tmp/downloads"
